@@ -1,8 +1,30 @@
 // 1. Write a function that takes an array of numbers and returns the largest number in the array.
-function largestNumber(array) {}
+function largestNumber(array) {
+  return Math.max(...array);
+}
 
+console.log(largestNumber([4, 8, 15, 16, 23, 42]));
+console.log(largestNumber([14, 8, 25, 66, 23, 42]));
 // 2. Write a function that takes a string and returns the number of vowels in the string.
-function numberOfVowels(string) {}
+function numberOfVowels(string) {
+  let countVowels = 0;
+  for (let i = 0; i < string.length; i++) {
+    let isVowel = string[i];
+    if (
+      isVowel === "a" ||
+      isVowel === "e" ||
+      isVowel === "i" ||
+      isVowel === "o" ||
+      isVowel === "u"
+    ) {
+      countVowels++;
+    }
+  }
+  return countVowels;
+}
+
+console.log(numberOfVowels("javascript"));
+console.log(numberOfVowels("I went to the cinema last weekend"));
 
 // 3. Write a function that takes two arrays of numbers and returns a new array with all the elements from both arrays, without any duplicates.
 function combineArrays(array1, array2) {}
